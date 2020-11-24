@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "crispy_forms",
     "mainapp",
     "authnapp",
     "basketapp",
@@ -35,6 +34,7 @@ INSTALLED_APPS = [
     "ordersapp",
     "debug_toolbar",
     "template_profiler_panel",
+    "django_extensions",
 ]
 
 # Django Crispy Forms
