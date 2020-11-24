@@ -11,15 +11,13 @@ from basketapp.models import Basket
 from ordersapp.forms import OrderItemForm
 from ordersapp.models import Order, OrderItem
 from mainapp.models import Product
-from django.http import JsonResponse
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-
-class OrderList(ListView):
+class OrderList(LoginRequiredMixin, ListView):
     model = Order
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
-
 
 class OrderItemsCreate(CreateView):
     model = Order
